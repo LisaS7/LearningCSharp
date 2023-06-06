@@ -14,35 +14,43 @@ namespace Parsing
 
             // The Parse function attempts to parse a string into a number
             // but it might throw an exception, so we need to catch that
-            int targetNum=0;
-            try {
+            int targetNum = 0;
+            try
+            {
                 // TODO: Use Parse to try a simple integer
-
+                targetNum = int.Parse(numStr1);
+                System.Console.WriteLine(targetNum);
 
                 // TODO: Use Parse to try a floating point number
                 // This only works if the decimal value is 0
-
+                targetNum = int.Parse(numStr2, NumberStyles.Float);
+                System.Console.WriteLine(targetNum);
 
                 // TODO: Use Parse to try a number with thousands marker
-
+                targetNum = int.Parse(numStr3, NumberStyles.AllowThousands);
+                System.Console.WriteLine(targetNum);
 
                 // TODO: Use Parse to try a number with thousands marker AND decimal
-
+                targetNum = int.Parse(numStr4, NumberStyles.Float | NumberStyles.AllowThousands);
+                System.Console.WriteLine(targetNum);
 
                 // TODO: This works with other types too, like bool
-
+                System.Console.WriteLine($"{bool.Parse("True")}");
 
                 // TODO: Or floating point numbers
-
+                System.Console.WriteLine($"{float.Parse("1.235"):F2}");
             }
-            catch {
+            catch
+            {
                 Console.Write("Conversion failed");
             }
 
             // TODO: The TryParse function is similar but handles the exceptions for us
             bool succeeded = false;
+            succeeded = Int32.TryParse(numStr1, out targetNum);
 
-            if (succeeded) {
+            if (succeeded)
+            {
                 Console.WriteLine($"{targetNum}");
             }
         }
