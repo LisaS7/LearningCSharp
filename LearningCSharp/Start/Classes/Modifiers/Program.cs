@@ -15,6 +15,11 @@ namespace Modifiers
             Console.WriteLine(b1.GetDescription());
 
             // TODO: set data using functions instead of accessing fields directly
+            b1.SetName("NewName");
+            b1.SetAuthor("NewAuthor");
+            b1.SetPageCount(100);
+
+            System.Console.WriteLine(b1.GetDescription());
 
         }
     }
