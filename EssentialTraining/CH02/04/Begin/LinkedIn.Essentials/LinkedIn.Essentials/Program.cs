@@ -7,3 +7,8 @@ Employee e = new Employee("Matt", "Milner", 75)
 };
 
 Console.WriteLine($"From {e.FirstName}  id {e.Id}, hello world");
+
+PremiereCustomer pcust = new PremiereCustomer(2);
+pcust.FirstName = "New Customer";
+
+System.Console.WriteLine($"{pcust.FirstName} has level {pcust.CustomerLevel}");
