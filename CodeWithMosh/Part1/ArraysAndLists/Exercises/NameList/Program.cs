@@ -9,21 +9,19 @@
 // Depending on the number of names provided, display a message based on the above pattern.
 
 var names = new List<string>();
-string input = null;
 
 while (true)
 {
     Console.WriteLine("Type a name, or press Enter to continue: ");
-    input = Console.ReadLine();
+    string input = Console.ReadLine();
 
     if (input == "")
     {
         break;
     }
-    else
-    {
-        names.Add(input);
-    }
+
+    names.Add(input);
+
 }
 
 switch (names.Count)
