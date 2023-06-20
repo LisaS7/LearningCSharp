@@ -1,0 +1,25 @@
+﻿namespace CSharpFundamentals
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string sentence = @" Ah, distinctly I remember it was in the bleak December;
+And each separate dying ember wrought its ghost upon the floor.
+    Eagerly I wished the morrow; —vainly I had sought to borrow
+    From my books surcease of sorrow—sorrow for the lost Lenore—
+For the rare and radiant maiden whom the angels name Lenore—
+            Nameless here for evermore.";
+
+            string summary = StringUtility.SummariseText(sentence);
+            Console.WriteLine(summary);
+
+
+        }
+
+    }
+
+}
+
+
+
